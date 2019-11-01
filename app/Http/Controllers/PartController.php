@@ -22,7 +22,8 @@ class PartController extends Controller
     {
         $data=$request->validated();
         Part::create($data);
-        return back()->with('done','Part Added.');
+        alert('Part','Part Created.', 'success');
+        return back();
     }
 
     public function show(Part $part){
@@ -37,12 +38,14 @@ class PartController extends Controller
     public function update(PartRequest $request, Part $part){
         $data=$request->validated();
         $part->update($data);
-        return back()->with('done','Part Updated.');
+        alert('Part','Part Updated.', 'success');
+        return back();
     }
 
     public function destroy(Part $part)
     {
         $part->delete();
-        return back()->with('done','Part Deleted.');
+        alert('Part','Part Deleted.', 'success');
+        return back();
     }
 }

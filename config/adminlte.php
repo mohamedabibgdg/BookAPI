@@ -133,12 +133,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Create category',
-                    'url'  => url('category/create'),
+                    'url'  => 'category/create',
                     'icon'    => 'fas fa-fw fa-plus',
                 ],
                 [
                     'text' => 'Show All category',
-                    'url'  => url('category'),
+                    'url'  => 'category',
                     'icon'    => 'fas fa-fw fa-cubes',
                 ],
             ],
@@ -149,12 +149,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Create Book',
-                    'url'  => url('books/create'),
+                    'url'  => 'books/create',
                     'icon'    => 'fas fa-fw fa-plus',
                 ],
                 [
                     'text' => 'Show All Book',
-                    'url'  => url('books'),
+                    'url'  => 'books',
                     'icon'    => 'fas fa-fw fa-book',
                 ],
             ],
@@ -165,12 +165,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Create Part',
-                    'url'  => url('parts/create'),
+                    'url'  => 'parts/create',
                     'icon'    => 'fas fa-fw fa-plus',
                 ],
                 [
                     'text' => 'Show All Part',
-                    'url'  => url('parts'),
+                    'url'  => 'parts',
                     'icon'    => 'fas fa-fw fa-book',
                 ],
             ],
@@ -216,7 +216,7 @@ return [
     'plugins' => [
         [
             'name' => 'Datatables',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -232,7 +232,7 @@ return [
         ],
         [
             'name' => 'Select2',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -248,7 +248,7 @@ return [
         ],
         [
             'name' => 'Chartjs',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -259,7 +259,7 @@ return [
         ],
         [
             'name' => 'Sweetalert2',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -270,7 +270,7 @@ return [
         ],
         [
             'name' => 'Pace',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'css',

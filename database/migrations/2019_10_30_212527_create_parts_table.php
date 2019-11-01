@@ -17,6 +17,9 @@ class CreatePartsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('book_id');
             $table->text('content');
+            $table->foreign('book_id')
+                ->references('id')->on('books')
+                ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

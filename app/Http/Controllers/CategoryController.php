@@ -24,7 +24,8 @@ class CategoryController extends Controller
             $data['image']=$this->uploadImage($request);
         }
         Category::create($data);
-        return back()->with('done','Category Added.');
+        alert('Category','Category Created.', 'success');
+        return back();
     }
 
     public function show(Category $category){
@@ -41,11 +42,13 @@ class CategoryController extends Controller
             $data['image']=$this->uploadImage($request);
         }
         $category->update($data);
-        return back()->with('done','Category Updated.');
+        alert('Category','Category Updated.', 'success');
+        return back();
     }
 
     public function destroy(Category $category){
         $category->delete();
-        return back()->with('done','Category Deleted.');
+        alert('Category','Category Deleted.', 'success');
+        return back();
     }
 }

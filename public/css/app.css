@@ -11100,6 +11100,7 @@ a.text-dark:focus {
   }
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100% !important;
 }
+

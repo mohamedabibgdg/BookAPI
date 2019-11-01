@@ -24,9 +24,10 @@ class BookController extends Controller
         if ($request->hasFile('image')) {
             $data['image']=$this->uploadImage($request);
         }
+        alert('Book','Book Created.', 'success');
 
         Book::create($data);
-        return back()->with('done','Book Added.');
+        return route('books.index');
     }
 
     public function show(Book $book){
@@ -45,11 +46,14 @@ class BookController extends Controller
             $data['image']=$this->uploadImage($request);
         }
         $book->update($data);
-        return back()->with('done','Book Updated.');
+        alert('Book','Book Updated.', 'success');
+        return back();
     }
     public function destroy(Book $book)
     {
         $book->delete();
-        return back()->with('done','Book Deleted.');
+        alert('Book','Book Deleted.', 'success');
+
+        return back();
     }
 }

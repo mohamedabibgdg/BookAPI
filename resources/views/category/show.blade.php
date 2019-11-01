@@ -4,18 +4,21 @@
         <div class="box-header">
 
         </div>
-        <div class="box-body">
-            <div class="col-md-4">
-                <img src="{{$category->image}}" alt="">
+        <div class="box-body row">
+            <div class="col-md-12">
+                Category Name : {{$category->name}}
+                <br>
+                <ol>
+                    @foreach ($category->books as $book)
+                        <li><a href="{{route('books.show',$book)}}">{{$book->name}}</a></li>
+                    @endforeach
+                </ol>
             </div>
-            Category Name : {{$category->name}}
 
-            <br>
-            <ol>
-                @foreach ($category->books as $book)
-                    <li><a href="{{route('books.show',$book)}}">{{$book->name}}</a></li>
-                @endforeach
-            </ol>
+            <div class="col-md-12">
+                <img src="{{$category->image}}">
+            </div>
+
         </div>
     </div>
 @stop
