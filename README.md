@@ -2,8 +2,11 @@
 Need to Install 
 
 - Xampp
-- Composer
+https://www.apachefriends.org/download.html
+- Composer `https://getcomposer.org/download/`
+https://getcomposer.org/Composer-Setup.exe `Win`
 - node
+https://nodejs.org/en/download/
 # install
  -  Composer in Project File 
 ~~~~
