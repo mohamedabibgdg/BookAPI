@@ -4,21 +4,30 @@ Need to Install
 - Xampp
 - Composer
 - node
+# install
+ -  Composer in Project File 
+~~~~
+composer install
+~~~~
+- Node in Project File
+~~~~
+npm install
+~~~~
 
 # To Start App
 
-**php artisan serve**
+`php artisan serve`
 
 After this need to database connection in file .env  and run 
 
-**php artisan migrate:fresh --seed**
+`php artisan migrate:fresh --seed`
 
 # API LINKS
 
 **_Book Links_**
 All Start with 
 
-http://127.0.0.1:8000/api/ Or 
+http://127.0.0.1:8000/api/ `Or `
 http://localhost:8000/api/
  ~~~~
  // Category
