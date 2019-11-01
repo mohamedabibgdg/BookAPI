@@ -24,6 +24,7 @@ class BookController extends Controller
         if ($request->hasFile('image')) {
             $data['image']=$this->uploadImage($request);
         }
+
         Book::create($data);
         return back()->with('done','Book Added.');
     }

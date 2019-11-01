@@ -58,7 +58,7 @@ return [
     |
     */
 
-    'layout' => null,
+    'layout' =>'fixed',
 
     /*
     |--------------------------------------------------------------------------
@@ -126,84 +126,54 @@ return [
     */
 
     'menu' => [
+        ['header' => 'CPanel'],
         [
-            'text' => 'search',
-            'search' => true,
-        ],
-        ['header' => 'main_navigation'],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Category',
+            'icon'    => 'fas fa-fw fa-cube',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Create category',
+                    'url'  => url('category/create'),
+                    'icon'    => 'fas fa-fw fa-plus',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Show All category',
+                    'url'  => url('category'),
+                    'icon'    => 'fas fa-fw fa-cubes',
                 ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
+            'text'    => 'Books',
+            'icon'    => 'fa fa-book',
+            'submenu' => [
+                [
+                    'text' => 'Create Book',
+                    'url'  => url('books/create'),
+                    'icon'    => 'fas fa-fw fa-plus',
+                ],
+                [
+                    'text' => 'Show All Book',
+                    'url'  => url('books'),
+                    'icon'    => 'fas fa-fw fa-book',
+                ],
+            ],
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
+            'text'    => 'Parts',
+            'icon'    => 'fa fa-plus',
+            'submenu' => [
+                [
+                    'text' => 'Create Part',
+                    'url'  => url('parts/create'),
+                    'icon'    => 'fas fa-fw fa-plus',
+                ],
+                [
+                    'text' => 'Show All Part',
+                    'url'  => url('parts'),
+                    'icon'    => 'fas fa-fw fa-book',
+                ],
+            ],
         ],
     ],
 
