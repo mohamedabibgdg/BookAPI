@@ -42,3 +42,16 @@ http://localhost:8000/api/
  post('part/update/{part}');
  post('part/delete/{part}');
 ~~~~
+# Notes
+
+ when using url replace
+~~~~
+{category} => category ID
+{book} => book ID
+{part} => part ID
+~~~~
+All response return **object** OR **Error** Page
+
+Don't need to Login when using API
+
+need Login to use Control Panel
